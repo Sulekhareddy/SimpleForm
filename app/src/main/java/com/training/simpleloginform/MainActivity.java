@@ -36,7 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                Toast.makeText(MainActivity.this, username + ", " + password, Toast.LENGTH_SHORT).show();
+                if(username.isEmpty() && password.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please enter the Username and Password", Toast.LENGTH_LONG).show();
+                }else if(username.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please enter the Username", Toast.LENGTH_LONG).show();
+                }else if(password.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please enter the Password", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(MainActivity.this, username + " , " + password, Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
