@@ -33,17 +33,17 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = usernameEditText.getText().toString();
+                String userName = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                if(username.isEmpty() && password.isEmpty()){
+                if(userName.isEmpty() && password.isEmpty()){
                     Toast.makeText(MainActivity.this, "Please enter the Username and Password", Toast.LENGTH_LONG).show();
-                }else if(username.isEmpty()){
+                }else if(userName.isEmpty()){
                     Toast.makeText(MainActivity.this, "Please enter the Username", Toast.LENGTH_LONG).show();
                 }else if(password.isEmpty()){
                     Toast.makeText(MainActivity.this, "Please enter the Password", Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(MainActivity.this, username + " , " + password, Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, userName + " , " + password, Toast.LENGTH_LONG).show();
                 }
             }
         });
